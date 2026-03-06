@@ -1,9 +1,8 @@
 import { Router } from "express"
+import { testConection } from "./controllers/productController"
 
 const router = Router()
 
-router.get("/", async (req, res) => {
-    res.json({ message: "Working" })
-})
+router.get("/testConection", testConection)
 
 export default router
