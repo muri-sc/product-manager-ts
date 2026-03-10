@@ -1,8 +1,9 @@
 import { Router } from "express"
-import { testConection } from "./controllers/productController"
+import * as productController from "./controllers/productController"
 
 const router = Router()
 
-router.get("/testConection", testConection)
+router.get("/products", productController.getProducts)
+router.post("/products", productController.createProduct)
 
 export default router
